@@ -32,7 +32,6 @@ namespace Eshopper_website.Models
 
 		[ForeignKey("PRO_ID")]
 		public virtual Product? Product { get; set; }
-		public virtual ICollection<Product>? Products { get; set; }
 
 	}
 }

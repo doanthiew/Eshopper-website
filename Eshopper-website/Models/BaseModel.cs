@@ -14,6 +14,6 @@ namespace Eshopper_website.Models
 		public DateTime UpdatedDate { get; set; } = DateTime.Now;
 
 		[DisplayName("Updated By")]
-		public string? UpdatedBy { get; set; }
+		public string? UpdatedBy { get; set; } = string.Empty;
 	}
 }

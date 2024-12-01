@@ -1,6 +1,7 @@
     using System.Diagnostics;
 using Eshopper_website.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Eshopper_website.Controllers
 {
@@ -8,8 +9,11 @@ namespace Eshopper_website.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+		private readonly EShopperContext _context;
+
+		public HomeController(ILogger<HomeController> logger, EShopperContext context)
         {
+			_context = context;
             _logger = logger;
         }
 
