@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Eshopper_website.Models
 {
-	[Table("Payments")]
+	[Table("PayMents")]
 	public class Payment : BaseModel
 	{
 		[Key]

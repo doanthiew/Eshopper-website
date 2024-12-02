@@ -1,3 +1,6 @@
+using Eshopper_website.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace Eshopper_website
 {
     public class Program
@@ -6,8 +9,11 @@ namespace Eshopper_website
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            builder.Services.AddControllersWithViews();
+			// Add services to the container.
+			builder.Services.AddDbContext<EShopperContext>(opt =>
+			opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+			builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 

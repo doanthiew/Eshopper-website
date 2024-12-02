@@ -30,14 +30,7 @@ namespace Eshopper_website.Models
 		[DisplayName("Quantity")]
 		public required int ORDE_Quantity { get; set; }
 
-		//[ForeignKey("USER_UserName")]
-		//public virtual User? User { get; set; }
-
-		[ForeignKey("ORD_OrderCode")]
-		public virtual Order? Order { get; set; }
-
 		[ForeignKey("PRO_ID")]
 		public virtual Product? Product { get; set; }
-
 	}
 }

@@ -12,7 +12,7 @@ namespace Eshopper_website.Models
 
 		[Required(ErrorMessage = "Please enter the shipping price!")]
 		[DisplayName("Price")]
-		public decimal SHIP_Price { get; set; }
+		public required decimal SHIP_Price { get; set; }
 
 		[Required(ErrorMessage = "Please enter ward name!"), MinLength(5), MaxLength(255)]
 		[DisplayName("Ward")]
